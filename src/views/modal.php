@@ -7,7 +7,7 @@
 /** @var $unique string */
 /** @var $cropperOptions [] */
 
-$modalLabel = Yii::t('cropper', 'Image Crop Editor');    
+$modalLabel = Yii::t('cropper', 'Image Crop Editor');
 $browseLabel = $cropperOptions['icons']['browse'] . ' ' . Yii::t('cropper', 'Browse');
 $cropLabel = $cropperOptions['icons']['crop'] . ' ' . Yii::t('cropper', 'Crop');
 $closeLabel = $cropperOptions['icons']['close'] . ' ' . Yii::t('cropper', 'Crop') . ' & ' . Yii::t('cropper', 'Close');
