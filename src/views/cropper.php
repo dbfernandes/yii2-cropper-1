@@ -34,7 +34,7 @@ if ($label !== false) {
 
     <?php if ($cropperOptions['preview'] !== false) : ?>
         <?php $preview = $cropperOptions['preview']; ?>
-        <div class="cropper-result" id="cropper-result-<?= $unique ?>" style="margin-top: 10px; width: <?= $preview['width'] ?>px; height: <?= $preview['height'] ?>px; border: 1px dotted #bfbfbf">
+        <div class="cropper-result" id="cropper-result-<?= $unique ?>" style="margin-top: 0px; width: <?= $preview['width'] ?>px; height: <?= $preview['height'] ?>px; border: 1px dotted #bfbfbf">
             <?php if (isset($preview['url'])) {
                 echo Html::img($preview['url'], ['width' => $preview['width'], 'height' => $preview['height']]);
             } ?>
