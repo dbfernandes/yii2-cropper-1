@@ -43,7 +43,7 @@ if ($label !== false) {
 
     <?= Html::button($browseLabel, [
         'class' => 'btn btn-primary',
-        'style' => 'width: ' . $preview['width'],
+        'style' => 'width: ' . $preview['width'] . 'px; margin-top: 4px',
         'data-toggle' => 'modal',
         'data-target' => '#cropper-modal-' . $unique,
         //'data-keyboard' => 'false',
