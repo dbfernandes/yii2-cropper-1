@@ -3,7 +3,7 @@
 return [
     'Image Crop Editor' => 'Editor de Imagem',
     'Browse' => 'Procurar',
-    'Crop' => 'Crop',
+    'Crop' => 'Cortar',
     'Close' => 'Fechar',
     'Width' => 'Largura',
     'Height' => 'Altura',
