@@ -1,17 +1,16 @@
 <?php
 
-namespace bilginnet\cropper;
-
+namespace dbfernandes\cropper;
 
 use yii\web\AssetBundle;
 use yii\web\View;
 
 /**
- * @author Ercan Bilgin <bilginnet@gmail.com>
+ * @author dbfernandes@gmail.com (forked from Ercan Bilgin <bilginnet@gmail.com>)
  */
 class CropperAsset extends AssetBundle
 {
-    public $sourcePath = '@bilginnet/cropper/assets';
+    public $sourcePath = '@dbfernandes/cropper/assets';
     public $jsOptions = ['position' => View::POS_END];
     public $css = [
         'cropper.css',

@@ -1,7 +1,6 @@
 <?php
 
-namespace bilginnet\cropper;
-
+namespace dbfernandes\cropper;
 
 use Yii;
 use yii\base\InvalidConfigException;
@@ -9,7 +8,7 @@ use yii\bootstrap\InputWidget;
 use yii\helpers\StringHelper;
 
 /**
- * @author Ercan Bilgin <bilginnet@gmail.com>
+ * @author dbfernandes@gmail.com (forked from Ercan Bilgin <bilginnet@gmail.com>)
  */
 class Cropper extends InputWidget
 {
@@ -91,7 +90,7 @@ class Cropper extends InputWidget
 			$defaultPreviewWidth = 100;
 			if ($options['width'] < $defaultPreviewWidth)
 				$options['preview']['width'] = $options['width'];
-			else 
+			else
 				$options['preview']['width'] = $defaultPreviewWidth;
 		}
         if (!isset($options['preview']['height'])) $options['preview']['height'] = $options['preview']['width'] / $aspectRatio;

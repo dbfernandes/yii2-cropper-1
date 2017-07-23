@@ -1,12 +1,7 @@
 # Yii2 Image Cropper InputWidget
 
-[![Minimum PHP Version](http://img.shields.io/badge/php-%3E%3D%205.3-8892BF.svg)](https://php.net/)
-[![Latest Stable Version](https://poser.pugx.org/bilginnet/yii2-cropper/v/stable)](https://packagist.org/packages/bilginnet/yii2-cropper)
-[![Total Downloads](https://poser.pugx.org/bilginnet/yii2-cropper/downloads)](https://packagist.org/packages/bilginnet/yii2-cropper)
-[![Latest Unstable Version](https://poser.pugx.org/bilginnet/yii2-cropper/v/unstable)](https://packagist.org/packages/bilginnet/yii2-cropper)
-[![License](https://poser.pugx.org/bilginnet/yii2-cropper/license)](https://packagist.org/packages/bilginnet/yii2-cropper)
-
-<a href="https://fengyuanchen.github.io/cropper/" target="_blank">Cropper.js</a> - Bootstrap Cropper (recommended) (already included).
+Forked from Ercan Bilgin (bilginnet@gmail.com)
+Original repository: bilginnet/yii2-cropper
 
 Features
 ------------
@@ -26,13 +21,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist bilginnet/yii2-cropper "dev-master"
+php composer.phar require --prefer-dist dbfernandes/yii2-cropper "dev-master"
 ```
 
 or add
 
 ```
-"bilginnet/yii2-cropper": "dev-master"
+"dbfernandes/yii2-cropper": "dev-master"
 ```
 
 to the require section of your `composer.json` file.
@@ -49,7 +44,7 @@ Let's add into config in your main-local config file before return[]
        Yii::setAlias('@uploadUrl', $baseUrl.'/uploads/');
        Yii::setAlias('@uploadPath', realpath(dirname(__FILE__).'/../../uploads/'));
        // image file will upload in //root/uploads   folder
-       
+
        return [
            ....
        ]
@@ -65,7 +60,7 @@ Let's add  in your model file
             ['_image', 'safe'],
         ];
     }
-    
+
     public function beforeSave($insert)
     {
         if (is_string($this->_image) && strstr($this->_image, 'data:image')) {
@@ -77,13 +72,13 @@ Let's add  in your model file
             file_put_contents(Yii::getAlias('@uploadPath') . '/' . $fileName, $data);
 
 
-            // deleting old image 
+            // deleting old image
             // $this->image is real attribute for filename in table
             // customize your code for your attribute            
             if (!$this->isNewRecord && !empty($this->image)) {
                 unlink(Yii::getAlias('@uploadPath/'.$this->image));
             }
-            
+
             // set new filename
             $this->image = $fileName;
         }
@@ -97,7 +92,7 @@ Let's add  in your model file
 Advanced usage in _form file
 -----
 ````php
- echo $form->field($model, '_image')->widget(\bilginnet\cropper\Cropper::className(), [
+ echo $form->field($model, '_image')->widget(\dbfernandes\cropper\Cropper::className(), [
     'cropperOptions' => [
         'width' => 100, // must be specified
         'height' => 100, // must be specified
@@ -111,7 +106,7 @@ Advanced usage in _form file
         ],
 
         // optional // defaults following code
-        // you can customize 
+        // you can customize
         'icons' => [
             'browse' => '<i class="fa fa-image"></i>',
             'crop' => '<i class="fa fa-crop"></i>',
@@ -120,8 +115,8 @@ Advanced usage in _form file
     ],
 
     // optional // defaults following code
-    // you can customize 
-    'label' => '$model->attribute->label', 
+    // you can customize
+    'label' => '$model->attribute->label',
 
  ]);
 ````
@@ -130,7 +125,7 @@ Advanced usage in _form file
 Simple usage in _form file
 -----
 ````php
- echo $form->field($model, '_image')->widget(\bilginnet\cropper\Cropper::className(), [
+ echo $form->field($model, '_image')->widget(\dbfernandes\cropper\Cropper::className(), [
     'cropperOptions' => [
         'width' => 100, // must be specified
         'height' => 100, // must be specified
