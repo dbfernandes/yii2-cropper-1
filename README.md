@@ -1,7 +1,7 @@
 # Yii2 Image Cropper InputWidget
 
-Forked from Ercan Bilgin (bilginnet@gmail.com)
-Original repository: bilginnet/yii2-cropper
+Forked from Ercan Bilgin (bilginnet@gmail.com).
+Original repository: bilginnet/yii2-cropper.
 
 Features
 ------------
@@ -21,13 +21,13 @@ The preferred way to install this extension is through [composer](http://getcomp
 Either run
 
 ```
-php composer.phar require --prefer-dist dbfernandes/yii2-cropper "dev-master"
+php composer.phar require --prefer-dist dbfernandes/yii2-cropper-cb "dev-master"
 ```
 
 or add
 
 ```
-"dbfernandes/yii2-cropper": "dev-master"
+"dbfernandes/yii2-cropper-cb": "dev-master"
 ```
 
 to the require section of your `composer.json` file.
