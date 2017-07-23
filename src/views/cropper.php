@@ -32,14 +32,6 @@ if ($label !== false) {
 
     <input type="text" id="<?= $inputOptions['id'] ?>" name="<?=  $inputOptions['name'] ?>" title="" class="hidden">
 
-    <?= Html::button($browseLabel, [
-        'class' => 'btn btn-primary',
-        'data-toggle' => 'modal',
-        'data-target' => '#cropper-modal-' . $unique,
-        //'data-keyboard' => 'false',
-        'data-backdrop' => 'static',
-    ]) ?>
-
     <?php if ($cropperOptions['preview'] !== false) : ?>
         <?php $preview = $cropperOptions['preview']; ?>
         <div class="cropper-result" id="cropper-result-<?= $unique ?>" style="margin-top: 10px; width: <?= $preview['width'] ?>px; height: <?= $preview['height'] ?>px; border: 1px dotted #bfbfbf">
@@ -48,6 +40,16 @@ if ($label !== false) {
             } ?>
         </div>
     <?php endif; ?>
+
+    <?= Html::button($browseLabel, [
+        'class' => 'btn btn-primary',
+        'style' => 'width: ' . $preview['width'],
+        'data-toggle' => 'modal',
+        'data-target' => '#cropper-modal-' . $unique,
+        //'data-keyboard' => 'false',
+        'data-backdrop' => 'static',
+    ]) ?>
+
 </div>
 
 <?php $this->registerCss('
