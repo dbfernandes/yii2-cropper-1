@@ -3,6 +3,8 @@
 Forked from Ercan Bilgin (bilginnet@gmail.com).
 Original repository: bilginnet/yii2-cropper.
 
+CB.
+
 Features
 ------------
 + Crop
